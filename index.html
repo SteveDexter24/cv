@@ -22,19 +22,22 @@ SID: 1155124868
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
   <!-- JS -->
-  <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
   <style media="screen">
     html,
-    body {
+    body{
       margin: 0;
       scroll-behavior: smooth;
       text-align: center;
       font-family: 'Open Sans', sans-serif;
+      background: #292b2c;
     }
-
+    p {
+      font-size: 105%;
+    }
     .vertical-center {
       min-height: 100%;
       min-height: 100vh;
@@ -48,7 +51,7 @@ SID: 1155124868
 
     .navbar-brand {
       font-family: "Ubuntu", sans-serif;
-      font-size: 2.2rem;
+      font-size: 1.8rem;
       font-weight: bold;
     }
 
@@ -85,6 +88,12 @@ SID: 1155124868
       .table img.loc-img {
         width: 14px;
       }
+      .me-me h1 {
+        font-size: 2rem;
+      }
+      .me-me h3 {
+        font-size: 1.5rem;
+      }
     }
 
     .table {
@@ -93,8 +102,18 @@ SID: 1155124868
 
     @media (min-width: 992px) {
       .list-group {
-        margin: 0 -8px;
+        margin: 10px -8px;
       }
+    }
+    #hw a {
+      margin: 8px 0;
+    }
+    .f-img {
+      width: 45px;
+      padding: 10px 0;
+    }
+    #contacts h5{
+      padding-bottom: 30px;
     }
   </style>
 </head>
@@ -145,7 +164,7 @@ SID: 1155124868
 
   <section id="s1">
     <div class="d-flex justify-content-center text-light text-center vertical-center">
-      <div>
+      <div class="me-me">
         <h1 class="display-3">Steve Dexter B. Tamang</h1>
         <hr style="background: white;">
         <h3>Self-introduction</h3>
@@ -539,7 +558,7 @@ SID: 1155124868
             <a href="#" class="list-group-item list-group-item-action">
               <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1">Favourite Website</h5>
-                <small>First</small>
+                <small>Fourth</small>
               </div>
               <p class="mb-1">When screen is less than 992px, the grid will change from 2 cards a row, to 1 row, 4 cards column.</p>
               <small>Cards from bootstrap were used</small>
@@ -547,7 +566,7 @@ SID: 1155124868
             <a href="#" class="list-group-item list-group-item-action">
               <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1">About This Homework</h5>
-                <small class="text-muted">Second</small>
+                <small class="text-muted">Fifth</small>
               </div>
               <p class="mb-1">When screen width is less than 992px (col-lg-6), the list items on the right will shift to the bottom.</p>
               <small class="text-muted">Custom list with flex-box were used</small>
@@ -555,10 +574,10 @@ SID: 1155124868
             <a href="#" class="list-group-item list-group-item-action">
               <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1">Contacts Section</h5>
-                <small class="text-muted">Third</small>
+                <small class="text-muted">Sixth</small>
               </div>
-              <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-              <small class="text-muted">Donec id elit non mi porta.</small>
+              <p class="mb-1">When screen width is less than 992px (col-lg-4), all the items in the grid will be in a single column.</p>
+              <small class="text-muted">Grids were used</small>
             </a>
           </div>
         </div>
@@ -567,41 +586,31 @@ SID: 1155124868
     </div>
   </section>
 
-  <footer id="contacts" class="footer">
-    <div class="divs">
-      <h2 style="color: white;">Contacts</h2>
-      <p style="margin: 0 6.5% 0;">"You used to call me on my cell phone, late night when you need my love"</p>
+  <footer id="contacts" class="bg-dark text-light">
+    <div style="margin: 0 10%;">
+      <h2 class="display-4">Contacts</h2>
+      <p>"You used to call me on my cell phone, late night when you need my love"</p>
       <p>― Drake</p>
-      <hr class="hr-2">
-      <div class="box-2">
-        <div class="container-footer">
-          <a href="https://www.instagram.com/stevedexter23/"><img src="image/ig-1.png" alt="instagram"></a>
+      <hr class="bg-light">
+      <div class="row">
+        <div class="col-lg-4">
+          <a href="https://www.instagram.com/stevedexter23/"><img class="f-img" src="image/ig-2.png" alt="instagram"></a>
+          <h5>Instagram</h5>
         </div>
-        <div class="container-footer">
-          <a href="https://www.linkedin.com/in/steve-tamang-832838167/"><img src="image/linked-in.png" alt="linkedin"></a>
+        <div class="col-lg-4">
+          <a href="https://www.linkedin.com/in/steve-tamang-832838167/"><img class="f-img" src="image/linked-in-2.png" alt="linkedin"></a>
+          <h5>Linkedin</h5>
         </div>
-        <div class="container-footer">
+        <div class="col-lg-4">
           <address>
-            <a href="mailto:1155124868@link.cuhk.edu.hk"><img src="image/email.png" alt="Email"></a>
-          </address>
-        </div>
-
-        <div class="container-footer">
-          <a class="a-f" href="https://www.instagram.com/stevedexter23/">Instagram</a>
-        </div>
-        <div class="container-footer">
-          <a class="a-f" href="https://www.linkedin.com/in/steve-tamang-832838167/">Linkedin</a>
-        </div>
-        <div class="container-footer">
-          <address>
-            <a class="a-f" href="mailto:1155124868@link.cuhk.edu.hk">Email</a>
+            <a href="mailto:1155124868@link.cuhk.edu.hk"><img class="f-img" src="image/email.png" alt="Email"></a>
+            <h5>Email</h5>
           </address>
         </div>
       </div>
       <p>© Steve Tamang 2020</p>
+      <hr>
     </div>
   </footer>
-
 </body>
-
 </html>
