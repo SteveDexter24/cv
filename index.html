@@ -10,21 +10,17 @@ SID: 1155124868
   <title>Steve Tamang</title>
   <link rel="icon" href="image/me.jpg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link rel="stylesheet" href="css/styles.css"> -->
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+
   <!-- JS -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="script/index.js"></script>
 
   <style media="screen">
     body {
@@ -57,8 +53,11 @@ SID: 1155124868
 
     .navbar-brand {
       font-family: "Ubuntu", sans-serif;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       font-weight: bold;
+    }
+    .navbar {
+      font-size: 1.1rem;
     }
 
     .carousel-item {
@@ -81,11 +80,13 @@ SID: 1155124868
     .table img.loc-img {
       width: 18px;
     }
+
     @media (min-width: 1100px) {
       .nav-item {
         padding: 12px;
       }
     }
+
     @media (max-width: 500px) {
       .table th {
         font-size: 75%;
@@ -136,6 +137,13 @@ SID: 1155124868
     #contacts h5 {
       padding-bottom: 30px;
     }
+    #special-bar {
+      padding: 0 33%;
+      font-size: 1.3rem;
+    }
+    .sp-bar {
+      display: none;
+    }
   </style>
 </head>
 
@@ -149,7 +157,7 @@ SID: 1155124868
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="#ab-me">Profile</a>
           </li>
           <li class="nav-item">
@@ -164,19 +172,11 @@ SID: 1155124868
           <li class="nav-item">
             <a class="nav-link" href="#hw">About this homework</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Special
-            </a>
-            <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item text-light" href="#">Task1: Align</a>
-              <a class="dropdown-item text-light" href="#">Task2: New Hobby</a>
-              <a class="dropdown-item text-light" href="#">Task3: Scroll</a>
-              <a class="dropdown-item text-light" href="#">Task4: Bonus</a>
-            </div>
-          </li>
           <li class="nav-item">
             <a class="nav-link" href="#contacts">Contacts</a>
+          </li>
+          <li class="nav-item active">
+            <a id="special" class="nav-link font-italic" href="#ab-me">Special</a>
           </li>
         </ul>
       </div>
@@ -194,6 +194,24 @@ SID: 1155124868
   </section>
 
   <section id="ab-me" class="bg-light">
+      <nav id="special-bar" class="navbar navbar-expand-lg navbar-dark text-white bg-dark sp-bar">
+        <div class="bg-dark">
+          <ul class="navbar-nav" style="margin: 0 20px;">
+            <li class="nav-item">
+              <a class="nav-link">Align</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">New Hobby</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" >Scroll</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Bonus</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     <div style="margin: 0 8%;">
       <h2 class="display-4 text-success">My Profile</h2>
       <h3 class="text-secondary">I'm a student at The Chinese University of Hong Kong majoring in Computer Engineering.</h3>
@@ -633,6 +651,9 @@ SID: 1155124868
       <hr>
     </div>
   </footer>
+
+
+
 </body>
 
 </html>
