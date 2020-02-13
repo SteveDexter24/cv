@@ -53,11 +53,12 @@ SID: 1155124868
 
     .navbar-brand {
       font-family: "Ubuntu", sans-serif;
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       font-weight: bold;
     }
+
     .navbar {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
     }
 
     .carousel-item {
@@ -137,10 +138,12 @@ SID: 1155124868
     #contacts h5 {
       padding-bottom: 30px;
     }
+
     #special-bar {
-      padding: 0 33%;
-      font-size: 1.3rem;
+      padding: 0 20% 0 33%;
+      font-size: 1.2rem;
     }
+
     .sp-bar {
       display: none;
     }
@@ -157,25 +160,25 @@ SID: 1155124868
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
+          <li class="nav-item nav-item-1">
             <a class="nav-link" href="#ab-me">Profile</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item nav-item-1">
             <a class="nav-link" href="#exp">Experiences</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item nav-item-1">
             <a class="nav-link" href="#abli">Abilities</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item nav-item-1">
             <a class="nav-link" href="#fav-web">Favourite Websites</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item nav-item-1">
             <a class="nav-link" href="#hw">About this homework</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item nav-item-1">
             <a class="nav-link" href="#contacts">Contacts</a>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item active nav-item-1">
             <a id="special" class="nav-link font-italic" href="#ab-me">Special</a>
           </li>
         </ul>
@@ -184,7 +187,7 @@ SID: 1155124868
   </header>
 
   <section id="s1">
-    <div class="d-flex justify-content-center text-light text-center vertical-center">
+    <div class="d-flex h-100 justify-content-center text-light text-center vertical-center">
       <div class="me-me">
         <h1 class="display-3">Steve Dexter B. Tamang</h1>
         <hr class="bg-light">
@@ -193,25 +196,28 @@ SID: 1155124868
     </div>
   </section>
 
-  <section id="ab-me" class="bg-light">
-      <nav id="special-bar" class="navbar navbar-expand-lg navbar-dark text-white bg-dark sp-bar">
-        <div class="bg-dark">
-          <ul class="navbar-nav" style="margin: 0 20px;">
-            <li class="nav-item">
-              <a class="nav-link">Align</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link">New Hobby</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" >Scroll</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link">Bonus</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+  <section id="ab-me" class="bg-white">
+    <nav id="special-bar" class="navbar navbar-expand-lg navbar-light text-dark bg-light sp-bar">
+      <div class="bg-light">
+        <ul class="navbar-nav" style="margin: 0 15px;">
+          <li class="nav-item">
+            <a class="nav-link">Align</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">New Hobby</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">Scroll</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">Bonus</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link close-nav-bar">Close</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <div style="margin: 0 8%;">
       <h2 class="display-4 text-success">My Profile</h2>
       <h3 class="text-secondary">I'm a student at The Chinese University of Hong Kong majoring in Computer Engineering.</h3>
@@ -566,7 +572,7 @@ SID: 1155124868
       <div class="row">
         <div class="col-lg-6">
           <div class="list-group text-left">
-            <a href="#" class="list-group-item list-group-item-action">
+            <a href="#ab-me" class="list-group-item list-group-item-action">
               <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1">My profile Section</h5>
                 <small>First</small>
@@ -574,7 +580,7 @@ SID: 1155124868
               <p class="mb-1">Grid will change layout from 3 items a row to 1 items in 3 columns (col-lg-4) when width less than 992px.</p>
               <small>Grids were used</small>
             </a>
-            <a href="#" class="list-group-item list-group-item-action">
+            <a href="#exp" class="list-group-item list-group-item-action">
               <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1">Experiences Section</h5>
                 <small class="text-muted">Second</small>
@@ -582,7 +588,7 @@ SID: 1155124868
               <p class="mb-1">When screen width is less than 992px (col-lg-6), the items on the right will shift to the bottom.</p>
               <small class="text-muted">Grids were used</small>
             </a>
-            <a href="#" class="list-group-item list-group-item-action">
+            <a href="#abli" class="list-group-item list-group-item-action">
               <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1">Abilities Section</h5>
                 <small class="text-muted">Third</small>
@@ -594,7 +600,7 @@ SID: 1155124868
         </div>
         <div class="col-lg-6">
           <div class="list-group text-left">
-            <a href="#" class="list-group-item list-group-item-action">
+            <a href="#fav-web" class="list-group-item list-group-item-action">
               <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1">Favourite Website</h5>
                 <small>Fourth</small>
@@ -602,7 +608,7 @@ SID: 1155124868
               <p class="mb-1">When screen is less than 992px, the grid will change from 2 cards a row, to 1 row, 4 cards column.</p>
               <small>Cards from bootstrap were used</small>
             </a>
-            <a href="#" class="list-group-item list-group-item-action">
+            <a href="#hw" class="list-group-item list-group-item-action">
               <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1">About This Homework</h5>
                 <small class="text-muted">Fifth</small>
@@ -610,7 +616,7 @@ SID: 1155124868
               <p class="mb-1">When screen width is less than 992px (col-lg-6), the list items on the right will shift to the bottom.</p>
               <small class="text-muted">Custom list with flex-box were used</small>
             </a>
-            <a href="#" class="list-group-item list-group-item-action">
+            <a href="#contacts" class="list-group-item list-group-item-action">
               <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1">Contacts Section</h5>
                 <small class="text-muted">Sixth</small>
