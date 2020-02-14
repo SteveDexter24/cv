@@ -1,13 +1,13 @@
 // Fade in of the page contents
 $("html").hide();
-$("html").fadeIn(3000);
+$("html").fadeIn(2800);
 
 
 // "Special" link bar to hide or show an extra bar of buttons for 4 task
 $(document).ready(function() {
   setTimeout(function(){
     $(".my-spinners").addClass("hide-show");
-  }, 2800);
+  }, 2700);
   setTimeout(function(){
     $("section").hide();
     $("header").hide();
@@ -17,7 +17,7 @@ $(document).ready(function() {
     $("section").show();
     $("header").show();
     $("footer").show();
-  }, 3000);
+  }, 2800);
   // Toggle between collapse and dropdown menu for mobile devices
   $('.navbar-toggler').click(function() {
     $('#navbarNavDropdown').toggleClass("collapse", "dropdown");
