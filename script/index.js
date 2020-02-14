@@ -53,7 +53,7 @@ $(document).ready(function() {
   // Task 2: New Hobby
   $(".add-new-hobby").click(function() {
     var myHobby = prompt("Enter a new hobby.");
-    if (myHobby != null) {
+    if (myHobby != null && myHobby != "") {
       if (!($(".gonna-add-hobby").hasClass("dummyClass"))) {
         $(".gonna-add-hobby").append("<h3>My Hobbies</h3>").addClass("text-success dummyClass");
         $(".dummyClass").append("<ul></ul>").addClass("hobby-ul").css("list-style", "none");
