@@ -73,7 +73,8 @@ $(document).ready(function() {
     $(".progress").toggleClass("progress-scroll", "progress-scroll");
     $(".progress").css({
       "position": "sticky",
-      "top": "0"
+      "top": "0",
+      "z-index": "3"
     });
     if($(".progress").hasClass("progress-scroll")){
       $(".scroll-top").attr("href", "#ab-me");
