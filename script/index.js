@@ -73,14 +73,15 @@ $(document).ready(function() {
     $(".progress").toggleClass("progress-scroll", "progress-scroll");
     $(".progress").css({
       "position": "sticky",
-      "top": "0",
+      "top": "10%",
       "z-index": "3",
-      "height": "22px"
+      "height": "24px"
     });
-    if($(".progress").hasClass("progress-scroll")){
-      $(".scroll-top").attr("href", "#ab-me");
-    }else {
-      $(".scroll-top").attr("href", "#s1");
+    if($(window).width() < 500){
+      $(".progress").css({
+        "height": "30px",
+        "z-index": "4"
+      });
     }
   });
 });
@@ -90,7 +91,8 @@ $(window).scroll(function(){
   var scroll_top = $(window).scrollTop();
   var doc_height = $(document).height();
   var window_height = $(window).height();
-  var scroll_percent = (scroll_top / (doc_height - window_height)) * 100;
+  var scroll_percent = ((scroll_top / (doc_height - window_height)) * 100);
+
   if(scroll_percent > 40 && scroll_percent < 70){
     $("#new_progress").css("background", "#3498db");
   }else if (scroll_percent > 70 && scroll_percent < 90){
@@ -100,7 +102,39 @@ $(window).scroll(function(){
   }else {
     $("#new_progress").css("background", "#16a085");
   }
+
+// Different Screen Sizes
+    if($(window).width() > 500){
+      if (scroll_percent > 17.2 || scroll_percent < 15){
+        $(".progress").css("top", "0");
+      }
+    }
+    if($(window).width() < 500){
+      if (scroll_percent > 8 && scroll_percent < 9){
+        $(".progress").css({
+          "position": "fixed",
+          "top": "190px",
+          "width": "100%",
+          "z-index": "5"
+        });
+      } else if (scroll_percent > 9 && scroll_percent <= 10){
+        $(".progress").css({
+          "position": "fixed",
+          "top": "85px",
+          "width": "100%",
+          "z-index": "5"
+        });
+      }else {
+        $(".progress").css({
+          "position": "sticky",
+          "top": "0",
+          "z-index": "5"
+        });
+      }
+    }
+
+
   $("#new_progress").attr("aria-valuenow", scroll_percent);
   $("#new_progress").css("width", scroll_percent + "%");
-  $("#new_progress").text(parseInt((scroll_percent)) + "% scrolled");
+  $("#new_progress").text(parseInt((scroll_percent)) + "% of the entire page scrolled").css("font-size", "18px");
 });

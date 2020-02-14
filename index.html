@@ -114,7 +114,7 @@ SID: 1155124868
       }
     }
 
-    @media (min-width: 1500px){
+    @media (min-width: 1500px) {
       #special-bar {
         padding-left: 38.5%;
       }
@@ -165,7 +165,7 @@ SID: 1155124868
 
 <body>
 
-  <header id="s0" class="header container-fluid bg-dark">
+  <header id="" class="header container-fluid bg-dark">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="#">Steve Dexter</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -192,14 +192,14 @@ SID: 1155124868
             <a class="nav-link" href="#contacts">Contacts</a>
           </li>
           <li class="nav-item nav-item-1">
-            <a id="special" class="nav-link font-italic" href="#ab-me">Special</a>
+            <a id="special" class="nav-link font-italic" href="#special-bar">Special</a>
           </li>
         </ul>
       </div>
     </nav>
   </header>
 
-  <div class="progress progress-scroll bg-light">
+  <div class="progress progress-scroll bg-white">
     <div id="new_progress" class="progress-bar text-dark" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
 
     </div>
@@ -214,30 +214,34 @@ SID: 1155124868
       </div>
     </div>
   </section>
+  <!-- To re-position the scroll bar one the scroll button from "special" is triggered -->
+  <div id="s0">
+
+  </div>
+  <nav id="special-bar" class="navbar navbar-expand-lg navbar-light text-dark bg-light sp-bar">
+    <div class="bg-light">
+      <ul class="navbar-nav">
+        <li class="nav-item align-text">
+          <a class="nav-link">Align</a>
+        </li>
+        <li class="nav-item add-new-hobby">
+          <a class="nav-link">New Hobby</a>
+        </li>
+        <li class="nav-item scroll-bar">
+          <a class="nav-link scroll-top" href="#s0">Scroll</a>
+        </li>
+        <li class="nav-item bonus-stuff">
+          <a class="nav-link">Bonus</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link close-nav-bar">Close</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
   <section id="ab-me" class="bg-white">
-    <nav id="special-bar" class="navbar navbar-expand-lg navbar-light text-dark bg-light sp-bar">
-      <div class="bg-light">
-        <ul class="navbar-nav">
-          <li class="nav-item align-text">
-            <a class="nav-link">Align</a>
-          </li>
-          <li class="nav-item add-new-hobby">
-            <a class="nav-link">New Hobby</a>
-          </li>
-          <li class="nav-item scroll-bar">
-            <a class="nav-link scroll-top" href="#s0">Scroll</a>
-          </li>
-          <li class="nav-item bonus-stuff">
-            <a class="nav-link">Bonus</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link close-nav-bar">Close</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div style="margin: 0 8%;">
+    <div style="margin: 0 9%;">
       <h2 class="display-4 text-success">My Profile</h2>
       <h3 class="text-secondary">I'm a student at The Chinese University of Hong Kong majoring in Computer Engineering.</h3>
       <hr>
@@ -277,7 +281,7 @@ SID: 1155124868
   </section>
 
   <section id="exp" class="third-section bg-1 text-secondary">
-    <div style="margin: 0 8%;">
+    <div style="margin: 0 9%;">
       <h2 class="display-4 text-success">Experiences</h2>
       <p>“The purpose of life is to live it, to taste experience to the utmost, to reach out eagerly and without fear for newer and richer experience.”</p>
       <p>― Eleanor Roosevelt</p>
@@ -361,7 +365,7 @@ SID: 1155124868
   </section>
 
   <section id="abli" class="table-light text-secondary bg-light">
-    <div style="margin: 0 8%;">
+    <div style="margin: 0 9%;">
       <h2 class="display-4 text-success">Abilities</h2>
       <p>“Life without Knowledge is death in disguise.”</p>
       <p>― Talib Kweli</p>
@@ -533,7 +537,7 @@ SID: 1155124868
   </section>
 
   <section id="fav-web" class="bg-dark text-dark">
-    <div style="margin: 0 8%;">
+    <div style="margin: 0 9%;">
       <h2 class="display-4 text-light">Favourite Websites</h2>
       <p class="text-light">“Every now and then go away, have a little relaxation, for when you come back to your work your judgment will be surer.
         Go some distance away because then the work appears smaller and more of it can be taken in at a glance and a lack of harmony and proportion is more readily seen.”</p>
@@ -586,7 +590,7 @@ SID: 1155124868
   </section>
 
   <section id="hw" class="hw text-dark bg-light">
-    <div style="margin: 0 8%;">
+    <div style="margin: 0 9%;">
       <h2 class="display-4">About This Homework...🤔🤔</h2>
       <p>"Those times you stay up late and you work hard.
         Those times when you don't feel like working. You're too tired.
@@ -656,7 +660,7 @@ SID: 1155124868
   </section>
 
   <footer id="contacts" class="bg-dark text-light">
-    <div style="margin: 0 8%;">
+    <div style="margin: 0 9%;">
       <h2 class="display-4">Contacts</h2>
       <p>"You used to call me on my cell phone, late night when you need my love"</p>
       <p>― Drake</p>
