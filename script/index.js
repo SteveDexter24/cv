@@ -73,16 +73,18 @@ $(document).ready(function() {
     $(".progress").toggleClass("progress-scroll", "progress-scroll");
     $(".progress").css({
       "position": "sticky",
-      "top": "10%",
+      "top": "0",
       "z-index": "3",
       "height": "24px"
     });
-    if($(window).width() < 500){
-      $(".progress").css({
-        "height": "30px",
-        "z-index": "4"
-      });
-    }
+
+    $(".progress-0").css({
+      "position": "sticky",
+      "top": "0",
+      "z-index": "3",
+      "height": "24px",
+    });
+
   });
 });
 
@@ -100,41 +102,23 @@ $(window).scroll(function(){
   }else if (scroll_percent > 90 && scroll_percent <= 100){
     $("#new_progress").css("background", "#e74c3c");
   }else {
+    $("#new_progress-0").css("background", "#16a085");
     $("#new_progress").css("background", "#16a085");
   }
 
-// Different Screen Sizes
-    if($(window).width() > 500){
-      if (scroll_percent > 17.2 || scroll_percent < 15){
-        $(".progress").css("top", "0");
-      }
-    }
-    if($(window).width() < 500){
-      if (scroll_percent > 8 && scroll_percent < 9){
-        $(".progress").css({
-          "position": "fixed",
-          "top": "190px",
-          "width": "100%",
-          "z-index": "5"
-        });
-      } else if (scroll_percent > 9 && scroll_percent <= 10){
-        $(".progress").css({
-          "position": "fixed",
-          "top": "85px",
-          "width": "100%",
-          "z-index": "5"
-        });
-      }else {
-        $(".progress").css({
-          "position": "sticky",
-          "top": "0",
-          "z-index": "5"
-        });
-      }
-    }
-
+  $("#new_progress-0").attr("aria-valuenow", scroll_percent);
+  $("#new_progress-0").css("width", scroll_percent + "%");
+  $("#new_progress-0").text(parseInt((scroll_percent)) + "% of the entire page scrolled").css("font-size", "18px");
 
   $("#new_progress").attr("aria-valuenow", scroll_percent);
   $("#new_progress").css("width", scroll_percent + "%");
   $("#new_progress").text(parseInt((scroll_percent)) + "% of the entire page scrolled").css("font-size", "18px");
+
+  if(scroll_percent < ($(window).height() / 44) - 11){
+    $(".progress-0").removeClass("hide-show");
+    $(".progress-1").addClass("hide-show");
+  }else {
+    $(".progress-0").addClass("hide-show");
+    $(".progress-1").removeClass("hide-show");
+  }
 });
