@@ -74,7 +74,8 @@ $(document).ready(function() {
     $(".progress").css({
       "position": "sticky",
       "top": "0",
-      "z-index": "3"
+      "z-index": "3",
+      "height": "22px"
     });
     if($(".progress").hasClass("progress-scroll")){
       $(".scroll-top").attr("href", "#ab-me");
@@ -90,7 +91,16 @@ $(window).scroll(function(){
   var doc_height = $(document).height();
   var window_height = $(window).height();
   var scroll_percent = (scroll_top / (doc_height - window_height)) * 100;
+  if(scroll_percent > 40 && scroll_percent < 70){
+    $("#new_progress").css("background", "#3498db");
+  }else if (scroll_percent > 70 && scroll_percent < 90){
+    $("#new_progress").css("background", "#f39c12");
+  }else if (scroll_percent > 90 && scroll_percent <= 100){
+    $("#new_progress").css("background", "#e74c3c");
+  }else {
+    $("#new_progress").css("background", "#16a085");
+  }
   $("#new_progress").attr("aria-valuenow", scroll_percent);
   $("#new_progress").css("width", scroll_percent + "%");
-  $("#text-progres").text(scroll_percent * 100 + "% scrolled");
+  $("#new_progress").text(parseInt((scroll_percent)) + "% scrolled");
 });
