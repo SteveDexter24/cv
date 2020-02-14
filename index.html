@@ -93,7 +93,7 @@ SID: 1155124868
       }
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
       .table th {
         font-size: 75%;
       }
@@ -151,6 +151,7 @@ SID: 1155124868
     .sp-bar {
       display: none;
     }
+
     .progress-scroll {
       display: none;
     }
@@ -159,7 +160,7 @@ SID: 1155124868
 
 <body>
 
-  <header class="header container-fluid bg-dark">
+  <header id="s0" class="header container-fluid bg-dark">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="#">Steve Dexter</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -193,6 +194,12 @@ SID: 1155124868
     </nav>
   </header>
 
+  <div class="progress progress-scroll bg-light">
+    <div id="new_progress" class="progress-bar bg-info" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+      <span id="text-progress"class="sr-only"></span>
+    </div>
+  </div>
+
   <section id="s1">
     <div class="d-flex h-100 justify-content-center text-light text-center vertical-center">
       <div class="me-me">
@@ -214,7 +221,7 @@ SID: 1155124868
             <a class="nav-link">New Hobby</a>
           </li>
           <li class="nav-item scroll-bar">
-            <a class="nav-link">Scroll</a>
+            <a class="nav-link scroll-top" href="#s0">Scroll</a>
           </li>
           <li class="nav-item bonus-stuff">
             <a class="nav-link">Bonus</a>
@@ -225,9 +232,6 @@ SID: 1155124868
         </ul>
       </div>
     </nav>
-    <div class="progress progress-scroll">
-      <div class="progress-bar bg-info" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-    </div>
     <div style="margin: 0 8%;">
       <h2 class="display-4 text-success">My Profile</h2>
       <h3 class="text-secondary">I'm a student at The Chinese University of Hong Kong majoring in Computer Engineering.</h3>

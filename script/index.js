@@ -71,8 +71,25 @@ $(document).ready(function() {
   // Trigger progress bar and hide progress bar
   $(".scroll-bar").click(function() {
     $(".progress").toggleClass("progress-scroll", "progress-scroll");
-    
+    $(".progress").css({
+      "position": "sticky",
+      "top": "0"
+    });
+    if($(".progress").hasClass("progress-scroll")){
+      $(".scroll-top").attr("href", "#ab-me");
+    }else {
+      $(".scroll-top").attr("href", "#s1");
+    }
   });
+});
 
-
+// Scroll bar implimentation
+$(window).scroll(function(){
+  var scroll_top = $(window).scrollTop();
+  var doc_height = $(document).height();
+  var window_height = $(window).height();
+  var scroll_percent = (scroll_top / (doc_height - window_height)) * 100;
+  $("#new_progress").attr("aria-valuenow", scroll_percent);
+  $("#new_progress").css("width", scroll_percent + "%");
+  $("#text-progres").text(scroll_percent * 100 + "% scrolled");
 });
