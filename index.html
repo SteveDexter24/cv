@@ -61,6 +61,11 @@ SID: 1155124868
       font-size: 1.05rem;
     }
 
+    #special-bar {
+      padding-left: 33%;
+      font-size: 1.2rem;
+    }
+
     .carousel-item {
       padding: 8% 20%;
     }
@@ -104,6 +109,10 @@ SID: 1155124868
       .me-me h3 {
         font-size: 1.5rem;
       }
+
+      #special-bar {
+        padding-left: 37%;
+      }
     }
 
     @media (max-width: 400px) {
@@ -139,12 +148,10 @@ SID: 1155124868
       padding-bottom: 30px;
     }
 
-    #special-bar {
-      padding: 0 20% 0 33%;
-      font-size: 1.2rem;
-    }
-
     .sp-bar {
+      display: none;
+    }
+    .progress-scroll {
       display: none;
     }
   </style>
@@ -178,7 +185,7 @@ SID: 1155124868
           <li class="nav-item nav-item-1">
             <a class="nav-link" href="#contacts">Contacts</a>
           </li>
-          <li class="nav-item active nav-item-1">
+          <li class="nav-item nav-item-1">
             <a id="special" class="nav-link font-italic" href="#ab-me">Special</a>
           </li>
         </ul>
@@ -199,17 +206,17 @@ SID: 1155124868
   <section id="ab-me" class="bg-white">
     <nav id="special-bar" class="navbar navbar-expand-lg navbar-light text-dark bg-light sp-bar">
       <div class="bg-light">
-        <ul class="navbar-nav" style="margin: 0 15px;">
-          <li class="nav-item">
+        <ul class="navbar-nav">
+          <li class="nav-item align-text">
             <a class="nav-link">Align</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item add-new-hobby">
             <a class="nav-link">New Hobby</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item scroll-bar">
             <a class="nav-link">Scroll</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item bonus-stuff">
             <a class="nav-link">Bonus</a>
           </li>
           <li class="nav-item">
@@ -218,16 +225,24 @@ SID: 1155124868
         </ul>
       </div>
     </nav>
+    <div class="progress progress-scroll">
+      <div class="progress-bar bg-info" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
     <div style="margin: 0 8%;">
       <h2 class="display-4 text-success">My Profile</h2>
       <h3 class="text-secondary">I'm a student at The Chinese University of Hong Kong majoring in Computer Engineering.</h3>
       <hr>
       <div class="row justify-content-center">
         <div class="col-lg-4">
-          <h3 class="text-success">About Me</h3>
-          <p class="text-secondary">I am a second-year computer engineering student that wants to build some web or mobile applications While finishing my bachelor's degree. After graduating from university,
-            I want to work as a software Engineer or maybe get a master's degree 🤷🏽‍♂️.
-          </p>
+          <div>
+            <h3 class="text-success">About Me</h3>
+            <p class="text-secondary">I am a second-year computer engineering student that wants to build some web or mobile applications While finishing my bachelor's degree. After graduating from university,
+              I want to work as a software Engineer or maybe get a master's degree 🤷🏽‍♂️.
+            </p>
+            <div class="col gonna-add-hobby">
+
+            </div>
+          </div>
         </div>
         <div class="col-lg-4">
           <img class="rounded-circle" src="image/me.jpg" alt="my cartoon face" style="width: 300px;">
