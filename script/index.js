@@ -101,7 +101,7 @@ $(document).ready(function() {
   });
 
   // Task 4: bonus
-  var myMessage = "After this alert is dismissed, you will see a floating red button on the bottom right of the screen. Also you will see some spinners, before the page is loaded or reloaded.";
+  var myMessage = "After this alert is dismissed, you will see a floating red button on the bottom right of the screen. And when your press the red button, you can see a message box. Message box and button floats.";
   $(".bonus-stuff").click(function(){
     alert(myMessage);
     $("#big-plus-button").toggleClass("hide-show");
