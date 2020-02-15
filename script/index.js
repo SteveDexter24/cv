@@ -36,7 +36,8 @@ $(document).ready(function() {
   });
   // Toggle 'active' on navbars
   $("li.nav-item").click(function() {
-    $(this).toggleClass("active", "active");
+    $('li').removeClass("active");
+    $(this).addClass("active");
   });
   // Task 1: Align
   var timer;
@@ -98,6 +99,17 @@ $(document).ready(function() {
     });
 
   });
+
+  // Task 4: bonus
+  var myMessage = "After this alert is dismissed, you will see a floating red button on the bottom right of the screen. Also you will see some spinners, before the page is loaded or reloaded.";
+  $(".bonus-stuff").click(function(){
+    alert(myMessage);
+    $("#big-plus-button").toggleClass("hide-show");
+  });
+  $("#big-plus-button").click(function(){
+    $(".card-ask-me").toggleClass("hide-show");
+  });
+
 });
 
 // Scroll bar implimentation
