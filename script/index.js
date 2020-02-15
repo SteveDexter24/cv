@@ -42,8 +42,7 @@ $(document).ready(function() {
   // Task 1: Align
   var timer;
   $(".align-text").click(function() {
-    alert("after 2 seconds, it will align text in this sequence: left>>right>>center>>left... untill you click another navbar item or click close");
-    timer = setInterval(alignment, 1910);
+    timer = setInterval(alignment, 1210);
   });
 
   function alignment() {
@@ -51,13 +50,13 @@ $(document).ready(function() {
       $("h1.text-success").removeClass("text-left");
       setTimeout(function() {
         $("h1, h2, h3, h4, h5, h6").css("text-align", "left");
-      }, 10);
+      }, 0);
       setTimeout(function() {
         $("h1, h2, h3, h4, h5, h6").css("text-align", "right");
-      }, 700);
+      }, 400);
       setTimeout(function() {
         $("h1, h2, h3, h4, h5, h6").css("text-align", "center");
-      }, 1200);
+      }, 800);
     } else {
       clearInterval(timer);
       $("h1, h2, h3, h4, h5, h6").css("text-align", "inherit");
