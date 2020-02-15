@@ -36,8 +36,7 @@ $(document).ready(function() {
   });
   // Toggle 'active' on navbars
   $("li.nav-item").click(function() {
-    $('li').removeClass("active");
-    $(this).addClass("active");
+    $(this).toggleClass("active", "active");
   });
   // Task 1: Align
   var timer;
@@ -112,7 +111,7 @@ $(window).scroll(function(){
     $("#new_progress").css("background", "#3498db");
   }else if (scroll_percent > 70 && scroll_percent < 90){
     $("#new_progress").css("background", "#f39c12");
-  }else if (scroll_percent > 90 && scroll_percent <= 100){
+  }else if (scroll_percent > 90 && scroll_percent <= 110){
     $("#new_progress").css("background", "#e74c3c");
   }else {
     $("#new_progress-0").css("background", "#16a085");
