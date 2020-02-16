@@ -194,4 +194,25 @@ $(window).scroll(function() {
     $(".progress-0").addClass("hide-show");
     $(".progress-1").removeClass("hide-show");
   }
+  // Styling
+  $("body").css({
+    "margin": "0",
+    "text-align": "center",
+    "font-family": "'Open Sans', sans-serif"
+  });
+  $("body, html").css({
+    "margin": "0",
+    "scroll-behavior": "smooth"
+  });
+  $("p").css("font-size", "105%");
+
+  // $(".vertical-center").css({
+  //   "min-height": "100%",
+  //   "min-height": "100vh",
+  //   "display": "flex",
+  //   "align-items": "center"
+  // });
+
+  $("#s1").css("background", "linear-gradient(90deg, rgba(142, 68, 173, 1.0) 1%, rgba(231, 76, 60, 1.0) 42%, rgba(241, 196, 15, 1.0) 100%)");
+
 });
