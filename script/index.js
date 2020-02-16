@@ -5,6 +5,7 @@ $("html").fadeIn(2800);
 
 // "Special" link bar to hide or show an extra bar of buttons for 4 task
 $(document).ready(function() {
+  $("p").css("font-size", "105%");
   setTimeout(function() {
     $(".my-spinners").addClass("hide-show");
   }, 2700);
@@ -101,7 +102,7 @@ $(document).ready(function() {
   });
 
   // Task 4: bonus
-  var myMessage = "After this alert is dismissed, you will see a floating red button on the bottom right of the screen. Press the button to toggle the message box. Message box and button floats.";
+  var myMessage = "After this alert is dismissed, you will see a floating red button on the bottom right of the screen. Press the button to toggle the message box. Message box and button floats. Also, when the page just load or reloaded, there will be spinners emulating that the page is loading.";
   $(".bonus-stuff").click(function() {
     alert(myMessage);
     $("#big-plus-button").toggleClass("hide-show");
@@ -118,19 +119,20 @@ $(document).ready(function() {
   $("#your-message").keydown(function() {
     var yourMessage = $("textarea").val();
     if (event.keyCode == 13) {
-      if (yourMessage == "") {
+      if (yourMessage == "" || yourMessage == null) {
         // Enter a toast
-        myToastFunction("Message was not sent, try typing again", "rgba(192, 57, 43,0.55)");
+        myToastFunction("Message was not sent, try typing again!", "rgba(192, 57, 43,0.6)");
       } else {
         $("#my-form").submit();
         // toast for success
-        myToastFunction("Message Sent!", "rgba(22, 160, 133,0.55)");
+        myToastFunction("Message Sent!", "rgba(22, 160, 133, 0.6)");
         // close message box
         $(".card-ask-me").toggleClass("hide-show");
         // change icon image back to speech bubble
         document.getElementById("message-bubble").src = "image/speech-bubble.png";
       }
       $("textarea").val("");
+
       return false;
     }
   });
@@ -150,11 +152,12 @@ function myToastFunction(my_toast_message, bg_color) {
   myToastBox.attr("id", "toast-box-id");
   var myToastMessage = $("<h2></h2>").text(my_toast_message).css({
     "position": "relative",
-    "top": "30%"
+    "top": "30%",
+    "font-family": "'Open Sans', sans-serif"
   });
   var myToast = myToastBox.append(myToastMessage);
 
-  $("#s0").append(myToast);
+  $("html").append(myToast);
 
   var time_out = setTimeout(function() {
     myToastBox.toggleClass("hide-show");
@@ -194,25 +197,4 @@ $(window).scroll(function() {
     $(".progress-0").addClass("hide-show");
     $(".progress-1").removeClass("hide-show");
   }
-  // Styling
-  $("body").css({
-    "margin": "0",
-    "text-align": "center",
-    "font-family": "'Open Sans', sans-serif"
-  });
-  $("body, html").css({
-    "margin": "0",
-    "scroll-behavior": "smooth"
-  });
-  $("p").css("font-size", "105%");
-
-  // $(".vertical-center").css({
-  //   "min-height": "100%",
-  //   "min-height": "100vh",
-  //   "display": "flex",
-  //   "align-items": "center"
-  // });
-
-  $("#s1").css("background", "linear-gradient(90deg, rgba(142, 68, 173, 1.0) 1%, rgba(231, 76, 60, 1.0) 42%, rgba(241, 196, 15, 1.0) 100%)");
-
 });

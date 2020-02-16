@@ -13,6 +13,8 @@ SID: 1155124868
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -23,7 +25,19 @@ SID: 1155124868
   <script src="script/index.js"></script>
 
   <style media="screen">
+    body {
+      margin: 0;
+      text-align: center;
+      font-family: 'Open Sans', sans-serif;
+    }
 
+    html,
+    body {
+      margin: 0;
+      scroll-behavior: smooth;
+    }
+
+  /*For Task 4: Bonus*/
     .vertical-center {
       min-height: 100%;
       min-height: 100vh;
@@ -31,7 +45,7 @@ SID: 1155124868
       align-items: center;
     }
 
-    /* Task 4 Bonus */
+    /* Task 4: Bonus */
     .floating-button {
       width: 60px;
       height: 60px;
@@ -103,30 +117,27 @@ SID: 1155124868
       top: -20px;
     }
 
-    /*End of task 4 bonus*/
-
     .navbar-brand {
       font-family: "Ubuntu", sans-serif;
       font-size: 1.5rem;
       font-weight: bold;
     }
+    /*End of task 4 bonus*/
 
+    .navbar {
+      font-size: 1.05rem;
+    }
+
+    /* Task 1: Align */
     #special-bar {
       padding-left: 33%;
       font-size: 1.2rem;
     }
-
-    .carousel-item {
-      padding: 8% 20%;
-    }
+    /* End of Task 1: Align */
 
     .loc-img {
       width: 20px;
       margin-right: 4px;
-    }
-
-    .bg-1 {
-      background: #f3efe0;
     }
 
     .table td {
@@ -137,13 +148,12 @@ SID: 1155124868
       width: 18px;
     }
 
-
     @media (min-width: 1500px) {
       #special-bar {
         padding-left: 38%;
       }
     }
-
+    /*Bootstrap table class*/
     .table {
       margin: 0;
     }
@@ -158,15 +168,7 @@ SID: 1155124868
       margin: 8px 0;
     }
 
-    .f-img {
-      width: 45px;
-      padding: 10px 0;
-    }
-
-    #contacts h5 {
-      padding-bottom: 30px;
-    }
-
+    /*Task 3: Scroll Bar*/
     .sp-bar {
       display: none;
     }
@@ -178,7 +180,7 @@ SID: 1155124868
     .hide-show {
       display: none;
     }
-
+    /*End of Task 3: Scroll Bar*/
     .ab-me-class {
       margin: 0 16%;
     }
@@ -187,7 +189,7 @@ SID: 1155124868
       width: 250px;
       padding-bottom: 10px;
     }
-
+    /*Bootstrap class*/
     @media (min-width: 1100px) {
       .nav-item {
         padding: 12px;
@@ -203,14 +205,7 @@ SID: 1155124868
         width: 14px;
       }
 
-      .me-me h1 {
-        font-size: 2rem;
-      }
-
-      .me-me h3 {
-        font-size: 1.5rem;
-      }
-
+      /*Task 1: Align */
       #special-bar {
         padding-left: 37%;
       }
@@ -227,6 +222,7 @@ SID: 1155124868
         width: 12px;
       }
 
+       /* Task 4: Bonus */
       .floating-button {
         width: 50px;
         height: 50px;
@@ -255,15 +251,16 @@ SID: 1155124868
         height: 45px;
         border: 2px solid #2e86de;
       }
+      /* End of Task 4: Bonus */
     }
   </style>
 </head>
 
 <body>
 
-  <header id="" class="header container-fluid bg-dark">
+  <header class="header container-fluid bg-dark">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="text-white" style="font-family: Ubuntu, sans-serif; font-size: 1.5rem; font-weight: bold;">Steve Dexter</a>
+      <a class="navbar-brand" href="#">Steve Dexter</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -331,12 +328,12 @@ SID: 1155124868
     </div>
   </div>
 
-  <section id="s1">
+  <section id="s1" style="background: linear-gradient(90deg, rgba(142, 68, 173, 1.0) 1%, rgba(231, 76, 60, 1.0) 42%, rgba(241, 196, 15, 1.0) 100%);">
     <div class="d-flex h-100 justify-content-center text-light text-center vertical-center">
-      <div class="me-me">
+      <div>
         <h1 class="display-3">Steve Dexter B. Tamang</h1>
         <hr class="bg-light">
-        <h3>Self-introduction</h3>
+        <h3 style="font-size: 2rem;">Self-introduction</h3>
       </div>
     </div>
 
@@ -428,7 +425,7 @@ SID: 1155124868
     </div>
   </section>
 
-  <section id="exp" class="third-section bg-1 text-secondary">
+  <section id="exp" class="third-section text-secondary" style="background: #f3efe0;">
     <div class="ab-me-class">
       <h2 class="display-4 text-success">Experiences</h2>
       <p>“The purpose of life is to live it, to taste experience to the utmost, to reach out eagerly and without fear for newer and richer experience.”</p>
@@ -815,17 +812,17 @@ SID: 1155124868
       <hr class="bg-light">
       <div class="row">
         <div class="col-4">
-          <a href="https://www.instagram.com/stevedexter23/"><img class="f-img" src="image/ig-2.png" alt="instagram"></a>
-          <h5>Instagram</h5>
+          <a href="https://www.instagram.com/stevedexter23/"><img src="image/ig-2.png" alt="instagram" style="width: 45px; padding: 10px 0;"></a>
+          <h5 style="padding-bottom: 30px;">Instagram</h5>
         </div>
         <div class="col-4">
-          <a href="https://www.linkedin.com/in/steve-tamang-832838167/"><img class="f-img" src="image/linked-in-2.png" alt="linkedin"></a>
-          <h5>Linkedin</h5>
+          <a href="https://www.linkedin.com/in/steve-tamang-832838167/"><img src="image/linked-in-2.png" alt="linkedin" style="width: 45px; padding: 10px 0;"></a>
+          <h5 style="padding-bottom: 30px;">Linkedin</h5>
         </div>
         <div class="col-4">
           <address>
-            <a href="mailto:1155124868@link.cuhk.edu.hk"><img class="f-img" src="image/email.png" alt="Email"></a>
-            <h5>Email</h5>
+            <a href="mailto:1155124868@link.cuhk.edu.hk"><img src="image/email.png" alt="Email" style="width: 45px; padding: 10px 0;"></a>
+            <h5 style="padding-bottom: 30px;">Email</h5>
           </address>
         </div>
       </div>
@@ -833,8 +830,6 @@ SID: 1155124868
       <hr>
     </div>
   </footer>
-
-
 
 </body>
 
