@@ -102,7 +102,7 @@ $(document).ready(function() {
   });
 
   // Task 4: bonus
-  var myMessage = "After this alert is dismissed, you will see a floating red button on the bottom right of the screen. Press the button to toggle the message box. Message box and button floats. Also, when the page just load or reloaded, there will be spinners emulating that the page is loading.";
+  var myMessage = "After this alert is dismissed, you will see a floating green button on the bottom right of the screen. Press the button to toggle the message box and the speech bubble change to cross(to dismiss the message box). Also, when the page just load or reloaded, there will be spinners emulating that the page is loading.";
   $(".bonus-stuff").click(function() {
     alert(myMessage);
     $("#big-plus-button").toggleClass("hide-show");
@@ -111,8 +111,10 @@ $(document).ready(function() {
     $(".card-ask-me").toggleClass("hide-show");
     if (!($(".card-ask-me").hasClass("hide-show"))) {
       document.getElementById("message-bubble").src = "image/close.png";
+      $(".floating-button").css("background","rgba(231, 76, 60, 1.0)");
     } else {
       document.getElementById("message-bubble").src = "image/speech-bubble.png";
+      $(".floating-button").css("background","#2ecc71");
     }
 
   });
@@ -121,13 +123,13 @@ $(document).ready(function() {
     if (event.keyCode == 13) {
       if (yourMessage == "" || yourMessage == null) {
         // Enter a toast
-        myToastFunction("Message was not sent, try typing again!", "rgba(192, 57, 43,0.6)");
+        myToastFunction("Message was not sent, try typing again!", "rgba(192, 57, 43,0.6)", 2200);
       } else {
         $("#my-form").submit(function(e){
           e.preventDefault();
         });
         // toast for success
-        myToastFunction("Message Sent!", "rgba(22, 160, 133, 0.6)");
+        myToastFunction("Message Sent!", "rgba(22, 160, 133, 0.6)", 1500);
         // close message box
         $(".card-ask-me").toggleClass("hide-show");
         // change icon image back to speech bubble
@@ -142,7 +144,7 @@ $(document).ready(function() {
 
 });
 // Toast function
-function myToastFunction(my_toast_message, bg_color) {
+function myToastFunction(my_toast_message, bg_color, timer) {
   var myToastBox = $("<div></div>").addClass("text-center text-white").css({
     "background": bg_color,
     "height": "80px",
@@ -163,7 +165,7 @@ function myToastFunction(my_toast_message, bg_color) {
 
   var time_out = setTimeout(function() {
     myToastBox.toggleClass("hide-show");
-  }, 1500);
+  }, timer);
 }
 
 // Scroll bar implimentation

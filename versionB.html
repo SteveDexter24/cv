@@ -37,7 +37,7 @@ SID: 1155124868
       scroll-behavior: smooth;
     }
 
-  /*For Task 4: Bonus*/
+    /*For Task 4: Bonus*/
     .vertical-center {
       min-height: 100%;
       min-height: 100vh;
@@ -50,7 +50,7 @@ SID: 1155124868
       width: 60px;
       height: 60px;
       border-radius: 50%;
-      background: rgba(231, 76, 60, 1.0);
+      background: #2ecc71;
       font-size: 30px;
       display: flex;
       align-items: center;
@@ -65,20 +65,16 @@ SID: 1155124868
       border: none;
       cursor: pointer;
     }
-
     .floating-button:hover {
       text-decoration: none;
     }
-
     .floating-button:active {
       background: rgba(231, 76, 60, 0.8);
     }
-
     .floating-button img {
       width: 53.5%;
       height: 53.5%;
     }
-
     .card-ask-me {
       width: 22rem;
       position: fixed;
@@ -89,11 +85,9 @@ SID: 1155124868
       background: #2e86de;
       box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.3);
     }
-
     .card-ask-me h5 {
       text-align: left;
     }
-
     .card-ask-me p {
       font-size: 0.95rem;
       text-align: left;
@@ -101,7 +95,6 @@ SID: 1155124868
       top: -20px;
       padding: 0 7px;
     }
-
     .card-ask-me img {
       width: 70px;
       height: 70px;
@@ -110,20 +103,18 @@ SID: 1155124868
       left: -5px;
       border: 4px solid #2e86de;
     }
-
     .form-pos {
       border-radius: 0;
       position: relative;
       top: -20px;
     }
-
     .navbar-brand {
       font-family: "Ubuntu", sans-serif;
       font-size: 1.5rem;
       font-weight: bold;
     }
-    /*End of task 4 bonus*/
 
+    /*End of task 4 bonus*/
     .navbar {
       font-size: 1.05rem;
     }
@@ -133,31 +124,28 @@ SID: 1155124868
       padding-left: 33%;
       font-size: 1.2rem;
     }
-    /* End of Task 1: Align */
 
+    /* End of Task 1: Align */
     .loc-img {
       width: 20px;
       margin-right: 4px;
     }
-
     .table td {
       text-align: right;
     }
-
     .table img.loc-img {
       width: 18px;
     }
-
     @media (min-width: 1500px) {
       #special-bar {
         padding-left: 38%;
       }
     }
+
     /*Bootstrap table class*/
     .table {
       margin: 0;
     }
-
     @media (min-width: 992px) {
       .list-group {
         margin: 10px -8px;
@@ -172,57 +160,49 @@ SID: 1155124868
     .sp-bar {
       display: none;
     }
-
     .progress-scroll {
       display: none;
     }
-
     .hide-show {
       display: none;
     }
+
     /*End of Task 3: Scroll Bar*/
     .ab-me-class {
       margin: 0 16%;
     }
-
     .my-face-img {
       width: 250px;
       padding-bottom: 10px;
     }
+
     /*Bootstrap class*/
     @media (min-width: 1100px) {
       .nav-item {
         padding: 12px;
       }
     }
-
     @media (max-width: 700px) {
       .table th {
         font-size: 75%;
       }
-
       .table img.loc-img {
         width: 14px;
       }
-
       /*Task 1: Align */
       #special-bar {
         padding-left: 37%;
       }
-
       .ab-me-class {
         margin: 0 7%;
       }
-
       .table th {
         font-size: 70%;
       }
-
       .table img.loc-img {
         width: 12px;
       }
-
-       /* Task 4: Bonus */
+      /* Task 4: Bonus */
       .floating-button {
         width: 50px;
         height: 50px;
@@ -231,21 +211,17 @@ SID: 1155124868
         right: 5px;
         bottom: 20px;
       }
-
       .card-ask-me {
         width: 17rem;
         position: fixed;
         right: 33px;
       }
-
       .card-ask-me p {
         font-size: 0.85rem;
       }
-
       .card-ask-me h5 {
         font-size: 1rem;
       }
-
       .card-ask-me img {
         width: 45px;
         height: 45px;
@@ -343,10 +319,10 @@ SID: 1155124868
         <p class="text-light">Hi, thanks for checking out my webpage, is there anything you'd like to say?</p>
         <div class="bg-white">
           <form id="my-form">
-            <textarea class="form-control form-pos" id="your-message" rows="2" style="border: 0; padding: 0;"></textarea>
+            <textarea class="form-control form-pos" id="your-message" rows="2" wrap="soft" style="resize: none; border-style: none"></textarea>
           </form>
           <small id="passwordHelpBlock" class="form-text text-muted">
-            Simply press enter to send.
+            Press Enter to send. Press the cross button to dismiss.
           </small>
         </div>
       </div>
