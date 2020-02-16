@@ -1,3 +1,8 @@
+/*
+Name: Tamang Steve Dexter B.
+SID: 1155124868
+*/
+
 // Fade in of the page contents
 $("html").hide();
 $("html").fadeIn(2800);
@@ -123,13 +128,13 @@ $(document).ready(function() {
     if (event.keyCode == 13) {
       if (yourMessage == "" || yourMessage == null) {
         // Enter a toast
-        myToastFunction("Message was not sent, try typing again!", "rgba(192, 57, 43,0.6)", 2200);
+        myToastFunction("Please try again!", "rgba(192, 57, 43,0.6)", 1200);
       } else {
         $("#my-form").submit(function(e){
           e.preventDefault();
         });
         // toast for success
-        myToastFunction("Message Sent!", "rgba(22, 160, 133, 0.6)", 1500);
+        myToastFunction("Message Sent!", "rgba(22, 160, 133, 0.6)", 1100);
         // close message box
         $(".card-ask-me").toggleClass("hide-show");
         // change icon image back to speech bubble
