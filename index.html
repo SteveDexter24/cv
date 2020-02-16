@@ -82,8 +82,8 @@ SID: 1155124868
     }
 
     .floating-button img {
-      width: 52%;
-      height: 52%;
+      width: 53.5%;
+      height: 53.5%;
     }
 
     .card-ask-me {
@@ -94,6 +94,7 @@ SID: 1155124868
       z-index: 3;
       border-width: 0;
       background: #2e86de;
+      box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.3);
     }
 
     .card-ask-me h5 {
@@ -367,14 +368,16 @@ SID: 1155124868
         <h5 class="text-light"><img class="rounded-circle" src="image/me.jpg" alt="my cartoon face">Steve Tamang</h5>
         <p class="text-light">Hi, thanks for checking out my webpage, is there anything you'd like to say?</p>
         <div class="bg-white">
-          <textarea class="form-control form-pos" id="exampleFormControlTextarea1" rows="2" style="border: 0; padding: 0;"></textarea>
+          <form id="my-form">
+            <textarea class="form-control form-pos" id="your-message" rows="2" style="border: 0; padding: 0;"></textarea>
+          </form>
           <small id="passwordHelpBlock" class="form-text text-muted">
             Simply press enter to send.
           </small>
         </div>
       </div>
     </div>
-    <a id="big-plus-button" class="text-light floating-button hide-show"><img src="image/speech-bubble.png"></a>
+    <a id="big-plus-button" class="text-light floating-button hide-show"><img id="message-bubble" src="image/speech-bubble.png"></a>
   </section>
 
   <!-- To re-position the scroll bar one the scroll button from "special" is triggered -->

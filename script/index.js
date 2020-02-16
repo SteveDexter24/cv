@@ -5,15 +5,15 @@ $("html").fadeIn(2800);
 
 // "Special" link bar to hide or show an extra bar of buttons for 4 task
 $(document).ready(function() {
-  setTimeout(function(){
+  setTimeout(function() {
     $(".my-spinners").addClass("hide-show");
   }, 2700);
-  setTimeout(function(){
+  setTimeout(function() {
     $("section").hide();
     $("header").hide();
     $("footer").hide();
   }, 0);
-  setTimeout(function(){
+  setTimeout(function() {
     $("section").show();
     $("header").show();
     $("footer").show();
@@ -102,30 +102,79 @@ $(document).ready(function() {
 
   // Task 4: bonus
   var myMessage = "After this alert is dismissed, you will see a floating red button on the bottom right of the screen. Press the button to toggle the message box. Message box and button floats.";
-  $(".bonus-stuff").click(function(){
+  $(".bonus-stuff").click(function() {
     alert(myMessage);
     $("#big-plus-button").toggleClass("hide-show");
   });
-  $("#big-plus-button").click(function(){
+  $("#big-plus-button").click(function() {
     $(".card-ask-me").toggleClass("hide-show");
+    if (!($(".card-ask-me").hasClass("hide-show"))) {
+      document.getElementById("message-bubble").src = "image/close.png";
+    } else {
+      document.getElementById("message-bubble").src = "image/speech-bubble.png";
+    }
+
+  });
+  $("#your-message").keydown(function() {
+    var yourMessage = $("textarea").val();
+    if (event.keyCode == 13) {
+      if (yourMessage == "") {
+        // Enter a toast
+        myToastFunction("Message was not sent, try typing again", "rgba(192, 57, 43,0.55)");
+      } else {
+        $("#my-form").submit();
+        // toast for success
+        myToastFunction("Message Sent!", "rgba(127, 140, 141, 0.55)");
+        // close message box
+        $(".card-ask-me").toggleClass("hide-show");
+        // change icon image back to speech bubble
+        document.getElementById("message-bubble").src = "image/speech-bubble.png";
+      }
+      $("textarea").val("");
+      return false;
+    }
   });
 
+
 });
+// Toast function
+function myToastFunction(my_toast_message, bg_color) {
+  var myToastBox = $("<div></div>").addClass("text-center text-white").css({
+    "background": bg_color,
+    "height": "80px",
+    "width": "100%",
+    "position": "fixed",
+    "top": "40%",
+    "z-index": "5"
+  });
+  myToastBox.attr("id", "toast-box-id");
+  var myToastMessage = $("<h2></h2>").text(my_toast_message).css({
+    "position": "relative",
+    "top": "30%"
+  });
+  var myToast = myToastBox.append(myToastMessage);
+
+  $("#s0").append(myToast);
+
+  var time_out = setTimeout(function() {
+    myToastBox.toggleClass("hide-show");
+  }, 1400);
+}
 
 // Scroll bar implimentation
-$(window).scroll(function(){
+$(window).scroll(function() {
   var scroll_top = $(window).scrollTop();
   var doc_height = $(document).height();
   var window_height = $(window).height();
   var scroll_percent = ((scroll_top / (doc_height - window_height)) * 100);
 
-  if(scroll_percent > 40 && scroll_percent < 70){
+  if (scroll_percent > 40 && scroll_percent < 70) {
     $("#new_progress").css("background", "#3498db");
-  }else if (scroll_percent > 70 && scroll_percent < 90){
+  } else if (scroll_percent > 70 && scroll_percent < 90) {
     $("#new_progress").css("background", "#f39c12");
-  }else if (scroll_percent > 90 && scroll_percent <= 110){
+  } else if (scroll_percent > 90) {
     $("#new_progress").css("background", "#e74c3c");
-  }else {
+  } else {
     $("#new_progress-0").css("background", "#16a085");
     $("#new_progress").css("background", "#16a085");
   }
@@ -138,10 +187,10 @@ $(window).scroll(function(){
   $("#new_progress").css("width", scroll_percent + "%");
   $("#new_progress").text(parseInt((scroll_percent)) + "% of the entire page scrolled").css("font-size", "18px");
 
-  if(scroll_percent < ($(window).height() / 44) - 11){
+  if (scroll_percent < ($(window).height() / 44) - 11) {
     $(".progress-0").removeClass("hide-show");
     $(".progress-1").addClass("hide-show");
-  }else {
+  } else {
     $(".progress-0").addClass("hide-show");
     $(".progress-1").removeClass("hide-show");
   }
