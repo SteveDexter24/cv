@@ -123,7 +123,9 @@ $(document).ready(function() {
         // Enter a toast
         myToastFunction("Message was not sent, try typing again!", "rgba(192, 57, 43,0.6)");
       } else {
-        $("#my-form").submit();
+        $("#my-form").submit(function(e){
+          e.preventDefault();
+        });
         // toast for success
         myToastFunction("Message Sent!", "rgba(22, 160, 133, 0.6)");
         // close message box
@@ -161,7 +163,7 @@ function myToastFunction(my_toast_message, bg_color) {
 
   var time_out = setTimeout(function() {
     myToastBox.toggleClass("hide-show");
-  }, 1400);
+  }, 1500);
 }
 
 // Scroll bar implimentation
