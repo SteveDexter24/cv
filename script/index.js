@@ -124,7 +124,7 @@ $(document).ready(function() {
       } else {
         $("#my-form").submit();
         // toast for success
-        myToastFunction("Message Sent!", "rgba(127, 140, 141, 0.55)");
+        myToastFunction("Message Sent!", "rgba(22, 160, 133,0.55)");
         // close message box
         $(".card-ask-me").toggleClass("hide-show");
         // change icon image back to speech bubble
