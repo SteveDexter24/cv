@@ -13,6 +13,8 @@ SID: 1155124868
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -35,10 +37,7 @@ SID: 1155124868
       scroll-behavior: smooth;
     }
 
-    p {
-      font-size: 105%;
-    }
-
+  /*For Task 4: Bonus*/
     .vertical-center {
       min-height: 100%;
       min-height: 100vh;
@@ -46,8 +45,76 @@ SID: 1155124868
       align-items: center;
     }
 
-    #s1 {
-      background: linear-gradient(90deg, rgba(142, 68, 173, 1.0) 1%, rgba(231, 76, 60, 1.0) 42%, rgba(241, 196, 15, 1.0) 100%);
+    /* Task 4: Bonus */
+    .floating-button {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: rgba(231, 76, 60, 1.0);
+      font-size: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: #ffffff;
+      box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+      position: fixed;
+      right: 30px;
+      bottom: 30px;
+      z-index: 2;
+      border: none;
+      cursor: pointer;
+    }
+
+    .floating-button:hover {
+      text-decoration: none;
+    }
+
+    .floating-button:active {
+      background: rgba(231, 76, 60, 0.8);
+    }
+
+    .floating-button img {
+      width: 53.5%;
+      height: 53.5%;
+    }
+
+    .card-ask-me {
+      width: 22rem;
+      position: fixed;
+      right: 25px;
+      bottom: 100px;
+      z-index: 3;
+      border-width: 0;
+      background: #2e86de;
+      box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-ask-me h5 {
+      text-align: left;
+    }
+
+    .card-ask-me p {
+      font-size: 0.95rem;
+      text-align: left;
+      position: relative;
+      top: -20px;
+      padding: 0 7px;
+    }
+
+    .card-ask-me img {
+      width: 70px;
+      height: 70px;
+      position: relative;
+      top: -15px;
+      left: -5px;
+      border: 4px solid #2e86de;
+    }
+
+    .form-pos {
+      border-radius: 0;
+      position: relative;
+      top: -20px;
     }
 
     .navbar-brand {
@@ -55,27 +122,22 @@ SID: 1155124868
       font-size: 1.5rem;
       font-weight: bold;
     }
+    /*End of task 4 bonus*/
 
     .navbar {
       font-size: 1.05rem;
     }
 
+    /* Task 1: Align */
     #special-bar {
       padding-left: 33%;
       font-size: 1.2rem;
     }
-
-    .carousel-item {
-      padding: 8% 20%;
-    }
+    /* End of Task 1: Align */
 
     .loc-img {
       width: 20px;
       margin-right: 4px;
-    }
-
-    .bg-1 {
-      background: #f3efe0;
     }
 
     .table td {
@@ -86,13 +148,12 @@ SID: 1155124868
       width: 18px;
     }
 
-
     @media (min-width: 1500px) {
       #special-bar {
         padding-left: 38%;
       }
     }
-
+    /*Bootstrap table class*/
     .table {
       margin: 0;
     }
@@ -107,15 +168,7 @@ SID: 1155124868
       margin: 8px 0;
     }
 
-    .f-img {
-      width: 45px;
-      padding: 10px 0;
-    }
-
-    #contacts h5 {
-      padding-bottom: 30px;
-    }
-
+    /*Task 3: Scroll Bar*/
     .sp-bar {
       display: none;
     }
@@ -127,7 +180,7 @@ SID: 1155124868
     .hide-show {
       display: none;
     }
-
+    /*End of Task 3: Scroll Bar*/
     .ab-me-class {
       margin: 0 16%;
     }
@@ -136,7 +189,7 @@ SID: 1155124868
       width: 250px;
       padding-bottom: 10px;
     }
-
+    /*Bootstrap class*/
     @media (min-width: 1100px) {
       .nav-item {
         padding: 12px;
@@ -152,20 +205,13 @@ SID: 1155124868
         width: 14px;
       }
 
-      .me-me h1 {
-        font-size: 2rem;
-      }
-
-      .me-me h3 {
-        font-size: 1.5rem;
-      }
-
+      /*Task 1: Align */
       #special-bar {
         padding-left: 37%;
       }
 
       .ab-me-class {
-        margin: 0 5%;
+        margin: 0 7%;
       }
 
       .table th {
@@ -175,13 +221,44 @@ SID: 1155124868
       .table img.loc-img {
         width: 12px;
       }
+
+       /* Task 4: Bonus */
+      .floating-button {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        right: 5px;
+        bottom: 20px;
+      }
+
+      .card-ask-me {
+        width: 17rem;
+        position: fixed;
+        right: 33px;
+      }
+
+      .card-ask-me p {
+        font-size: 0.85rem;
+      }
+
+      .card-ask-me h5 {
+        font-size: 1rem;
+      }
+
+      .card-ask-me img {
+        width: 45px;
+        height: 45px;
+        border: 2px solid #2e86de;
+      }
+      /* End of Task 4: Bonus */
     }
   </style>
 </head>
 
 <body>
 
-  <header id="" class="header container-fluid bg-dark">
+  <header class="header container-fluid bg-dark">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="#">Steve Dexter</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -214,6 +291,8 @@ SID: 1155124868
       </div>
     </nav>
   </header>
+
+
 
   <div class="my-spinners vertical-center justify-content-center ab-me-class">
     <div class="spinner-grow text-primary" role="status">
@@ -249,15 +328,32 @@ SID: 1155124868
     </div>
   </div>
 
-  <section id="s1">
+  <section id="s1" style="background: linear-gradient(90deg, rgba(142, 68, 173, 1.0) 1%, rgba(231, 76, 60, 1.0) 42%, rgba(241, 196, 15, 1.0) 100%);">
     <div class="d-flex h-100 justify-content-center text-light text-center vertical-center">
-      <div class="me-me">
+      <div>
         <h1 class="display-3">Steve Dexter B. Tamang</h1>
         <hr class="bg-light">
-        <h3>Self-introduction</h3>
+        <h3 style="font-size: 2rem;">Self-introduction</h3>
       </div>
     </div>
+
+    <div class="card card-ask-me hide-show">
+      <div class="card-body" style="padding: 0;">
+        <h5 class="text-light"><img class="rounded-circle" src="image/me.jpg" alt="my cartoon face">Steve Tamang</h5>
+        <p class="text-light">Hi, thanks for checking out my webpage, is there anything you'd like to say?</p>
+        <div class="bg-white">
+          <form id="my-form">
+            <textarea class="form-control form-pos" id="your-message" rows="2" style="border: 0; padding: 0;"></textarea>
+          </form>
+          <small id="passwordHelpBlock" class="form-text text-muted">
+            Simply press enter to send.
+          </small>
+        </div>
+      </div>
+    </div>
+    <a id="big-plus-button" class="text-light floating-button hide-show"><img id="message-bubble" src="image/speech-bubble.png"></a>
   </section>
+
   <!-- To re-position the scroll bar one the scroll button from "special" is triggered -->
   <div id="s0">
 
@@ -286,7 +382,6 @@ SID: 1155124868
 
   <div class="progress progress-1 progress-scroll bg-white">
     <div id="new_progress" class="progress-bar text-dark" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-
     </div>
   </div>
 
@@ -320,7 +415,7 @@ SID: 1155124868
             </ul>
             <h4 class="text-success">What I don't like...</h4>
             <ul class="text-secondary">
-              <li>Unethical corporations, white-collar criminals and thoses that violates workers' rights and avoids tax.</li>
+              <li>Unethical corporations, white-collar criminals.</li>
               <li>Slow internet connections</li>
               <li>Drinking alcoholic drinks, it honestly taste bad.</li>
             </ul>
@@ -330,7 +425,7 @@ SID: 1155124868
     </div>
   </section>
 
-  <section id="exp" class="third-section bg-1 text-secondary">
+  <section id="exp" class="third-section text-secondary" style="background: #f3efe0;">
     <div class="ab-me-class">
       <h2 class="display-4 text-success">Experiences</h2>
       <p>“The purpose of life is to live it, to taste experience to the utmost, to reach out eagerly and without fear for newer and richer experience.”</p>
@@ -717,17 +812,17 @@ SID: 1155124868
       <hr class="bg-light">
       <div class="row">
         <div class="col-4">
-          <a href="https://www.instagram.com/stevedexter23/"><img class="f-img" src="image/ig-2.png" alt="instagram"></a>
-          <h5>Instagram</h5>
+          <a href="https://www.instagram.com/stevedexter23/"><img src="image/ig-2.png" alt="instagram" style="width: 45px; padding: 10px 0;"></a>
+          <h5 style="padding-bottom: 30px;">Instagram</h5>
         </div>
         <div class="col-4">
-          <a href="https://www.linkedin.com/in/steve-tamang-832838167/"><img class="f-img" src="image/linked-in-2.png" alt="linkedin"></a>
-          <h5>Linkedin</h5>
+          <a href="https://www.linkedin.com/in/steve-tamang-832838167/"><img src="image/linked-in-2.png" alt="linkedin" style="width: 45px; padding: 10px 0;"></a>
+          <h5 style="padding-bottom: 30px;">Linkedin</h5>
         </div>
         <div class="col-4">
           <address>
-            <a href="mailto:1155124868@link.cuhk.edu.hk"><img class="f-img" src="image/email.png" alt="Email"></a>
-            <h5>Email</h5>
+            <a href="mailto:1155124868@link.cuhk.edu.hk"><img src="image/email.png" alt="Email" style="width: 45px; padding: 10px 0;"></a>
+            <h5 style="padding-bottom: 30px;">Email</h5>
           </address>
         </div>
       </div>
@@ -735,8 +830,6 @@ SID: 1155124868
       <hr>
     </div>
   </footer>
-
-
 
 </body>
 
