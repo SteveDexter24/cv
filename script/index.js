@@ -24,6 +24,9 @@ $(document).ready(function() {
     $("header").show();
     $("footer").show();
   }, 2800);
+  setTimeout(function() {
+    $("body").addClass("bg-dark");
+  }, 4000);
   // Toggle between collapse and dropdown menu for mobile devices
   $('.navbar-toggler').click(function() {
     $('#navbarNavDropdown').toggleClass("collapse", "dropdown");
@@ -35,10 +38,16 @@ $(document).ready(function() {
   // Show and close bottom navbar when "special" is clicked
   $("#special").click(function() {
     $('#special-bar').toggleClass("sp-bar", "sp-bar");
+    $("#special-bar").css({
+      "z-index": "2"
+    });
   });
   // close bottom navbar when 'close' is clicked
   $(".close-nav-bar").click(function() {
     $('#special-bar').toggleClass("sp-bar", "sp-bar");
+    $("h1, h2, h3, h4, h5, h6").css("text-align", "inherit");
+    $("h1.text-success").addClass("text-left");
+    
   });
   // Toggle 'active' on navbars
   $("li.nav-item").click(function() {
@@ -92,18 +101,10 @@ $(document).ready(function() {
     $(".progress").toggleClass("progress-scroll", "progress-scroll");
     $(".progress").css({
       "position": "sticky",
-      "top": "0",
+      "top": "0%",
       "z-index": "3",
       "height": "24px"
     });
-
-    $(".progress-0").css({
-      "position": "sticky",
-      "top": "0",
-      "z-index": "3",
-      "height": "24px",
-    });
-
   });
 
   // Task 4: bonus
@@ -139,14 +140,13 @@ $(document).ready(function() {
         $(".card-ask-me").toggleClass("hide-show");
         // change icon image back to speech bubble
         document.getElementById("message-bubble").src = "image/speech-bubble.png";
+        $(".floating-button").css("background","#2ecc71");
       }
       $("textarea").val("");
 
       return false;
     }
   });
-
-
 });
 // Toast function
 function myToastFunction(my_toast_message, bg_color, timer) {
@@ -187,23 +187,10 @@ $(window).scroll(function() {
   } else if (scroll_percent > 90) {
     $("#new_progress").css("background", "#e74c3c");
   } else {
-    $("#new_progress-0").css("background", "#16a085");
     $("#new_progress").css("background", "#16a085");
   }
-
-  $("#new_progress-0").attr("aria-valuenow", scroll_percent);
-  $("#new_progress-0").css("width", scroll_percent + "%");
-  $("#new_progress-0").text(parseInt((scroll_percent)) + "% of the entire page scrolled").css("font-size", "18px");
 
   $("#new_progress").attr("aria-valuenow", scroll_percent);
   $("#new_progress").css("width", scroll_percent + "%");
   $("#new_progress").text(parseInt((scroll_percent)) + "% of the entire page scrolled").css("font-size", "18px");
-
-  if (scroll_percent < ($(window).height() / 44) - 11) {
-    $(".progress-0").removeClass("hide-show");
-    $(".progress-1").addClass("hide-show");
-  } else {
-    $(".progress-0").addClass("hide-show");
-    $(".progress-1").removeClass("hide-show");
-  }
 });
