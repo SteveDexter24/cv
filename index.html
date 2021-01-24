@@ -13,11 +13,14 @@ SID: 1155124868
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  
 
   <!-- JS -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -68,7 +71,7 @@ SID: 1155124868
       text-decoration: none;
     }
     .floating-button:active {
-      background: rgba(46, 204, 113, 0.9);
+      background: rgba(231, 76, 60, 0.8);
     }
     .floating-button img {
       width: 53.5%;
@@ -251,49 +254,21 @@ SID: 1155124868
             <a class="nav-link" href="#abli">Abilities</a>
           </li>
           <li class="nav-item nav-item-1">
-            <a class="nav-link" href="#fav-web">Favourite Websites</a>
-          </li>
-          <li class="nav-item nav-item-1">
-            <a class="nav-link" href="#hw">About this homework</a>
+            <a class="nav-link" href="#fav-web">Projects</a>
           </li>
           <li class="nav-item nav-item-1">
             <a class="nav-link" href="#contacts">Contacts</a>
           </li>
-          <li class="nav-item nav-item-1">
+          <!-- <li class="nav-item nav-item-1">
             <a id="special" class="nav-link font-italic" href="#special-bar">Special</a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </nav>
   </header>
 
-  <nav id="special-bar" class="navbar navbar-expand-lg navbar-light text-dark bg-light sp-bar">
-    <div class="bg-light">
-      <ul class="navbar-nav">
-        <li class="nav-item align-text">
-          <a class="nav-link" href="#ab-me">Align</a>
-        </li>
-        <li class="nav-item add-new-hobby">
-          <a class="nav-link" href="#ab-me">New Hobby</a>
-        </li>
-        <li class="nav-item scroll-bar">
-          <a class="nav-link scroll-top">Scroll</a>
-        </li>
-        <li class="nav-item bonus-stuff">
-          <a class="nav-link" href="#ab-me">Bonus</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link close-nav-bar">Close</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
 
-  <div class="progress progress-1 progress-scroll bg-white">
-    <div id="new_progress" class="progress-bar text-dark" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-  </div>
 
-  </div>
   <div class="my-spinners vertical-center justify-content-center ab-me-class">
     <div class="spinner-grow text-primary" role="status">
       <span class="sr-only">Loading...</span>
@@ -322,6 +297,12 @@ SID: 1155124868
   </div>
 
 
+  <div class="progress progress-0 progress-scroll bg-white">
+    <div id="new_progress-0" class="progress-bar text-dark" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+
+    </div>
+  </div>
+
   <section id="s1" style="background: linear-gradient(90deg, rgba(142, 68, 173, 1.0) 1%, rgba(231, 76, 60, 1.0) 42%, rgba(241, 196, 15, 1.0) 100%);">
     <div class="d-flex h-100 justify-content-center text-light text-center vertical-center">
       <div>
@@ -348,6 +329,36 @@ SID: 1155124868
     <a id="big-plus-button" class="text-light floating-button hide-show"><img id="message-bubble" src="image/speech-bubble.png"></a>
   </section>
 
+  <!-- To re-position the scroll bar one the scroll button from "special" is triggered -->
+  <div id="s0">
+
+  </div>
+  <nav id="special-bar" class="navbar navbar-expand-lg navbar-light text-dark bg-light sp-bar">
+    <div class="bg-light">
+      <ul class="navbar-nav">
+        <li class="nav-item align-text">
+          <a class="nav-link">Align</a>
+        </li>
+        <li class="nav-item add-new-hobby">
+          <a class="nav-link">New Hobby</a>
+        </li>
+        <li class="nav-item scroll-bar">
+          <a class="nav-link scroll-top" href="#s0">Scroll</a>
+        </li>
+        <li class="nav-item bonus-stuff">
+          <a class="nav-link">Bonus</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link close-nav-bar">Close</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="progress progress-1 progress-scroll bg-white">
+    <div id="new_progress" class="progress-bar text-dark" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+    </div>
+  </div>
 
   <section id="ab-me" class="bg-white">
     <div class="ab-me-class">
@@ -358,7 +369,7 @@ SID: 1155124868
         <div class="col-lg-4">
           <div>
             <h3 class="text-success">About Me</h3>
-            <p class="text-secondary">I am a second-year computer engineering student that wants to build some web or mobile applications While finishing my bachelor's degree. After graduating from university,
+            <p class="text-secondary">I am a third-year computer engineering student that wants to build some web or mobile applications While finishing my bachelor's degree. After graduating from university,
               I want to work as a software Engineer or maybe get a master's degree 🤷🏽‍♂️.
             </p>
             <div class="col gonna-add-hobby">
@@ -374,12 +385,12 @@ SID: 1155124868
             <h4 class="text-success">What I like to do...</h4>
             <ul class="text-secondary">
               <li>Play Basketball with friends and do some shooting drills.</li>
-              <li>Play NBA 2K20, favourite player to play as is Stephen Curry.</li>
+              <li>Play NBA 2K21, favourite player to play as is Stephen Curry.</li>
               <li>Watch Netflix, favourite show is Explained by Vox.</li>
             </ul>
             <h4 class="text-success">What I don't like...</h4>
             <ul class="text-secondary">
-              <li>Unethical corporations, white-collar criminals.</li>
+              
               <li>Slow internet connections</li>
               <li>Drinking alcoholic drinks, it honestly taste bad.</li>
             </ul>
@@ -404,11 +415,9 @@ SID: 1155124868
         </div>
         <div class="col-lg-6">
           <h4 class="text-dark">B.Eng. in Computer Engineering</h4>
-          <p>My education is mainly computer science topics, I learned about Data Structure, building web applications,
-            software engineering and more. By this summer, I will try to transfer to computer science major
-            and choose the 'Intelligence Science Stream' because I am quite interested in
-            Artificial Intelligence and Machine Learning.</p>
-          <p><img src="image/loc.png" class="loc-img"> Shatin, N.T. Hong Kong SAR</p>
+          <p>I learned about Data Structure, building web applications,
+            software engineering, operating systems and embedded systems.</p>
+          <p><img src="image/loc-1.png" class="loc-img"> Shatin, N.T. Hong Kong SAR</p>
         </div>
       </div>
 
@@ -421,25 +430,13 @@ SID: 1155124868
           <h4 class="text-dark">High school - Electives: Chemistry, Physics, Economics, Math Extended Module 1</h4>
           <p>I graduated high school, where I studied chemistry, math, physics and economics.
             I realized in my final year of high school that I wanted to do something with mobile applications, and so I started to learn swift and a little bit about iOS applications development.</p>
-          <p><img src="image/loc.png" class="loc-img"> Braemar Hill, North Point, Hong Kong</p>
+          <p><img src="image/loc-1.png" class="loc-img"> Braemar Hill, North Point, Hong Kong</p>
         </div>
       </div>
 
-      <div class="row justify-content-center text-left" style="padding: 20px;">
-        <div class="col-lg-6">
-          <h3 class="text-dark">Udemy (does it even count?)</h3>
-          <p>May 2019 - Sep 2019</p>
-        </div>
-        <div class="col-lg-6">
-          <h4 class="text-dark">Online Education - Android O and Java</h4>
-          <p>This course I took is basically about Android application development.
-            I have learned about Model View Controller (MVC), making asynchronous API calls, store and retrieve data from the cloud.</p>
-          <p><img src="image/loc.png" class="loc-img"> Online</p>
-        </div>
-      </div>
 
       <hr class="bg-light">
-      <h1 class="text-success text-left">Course taken at CUHK</h1>
+      <h1 class="text-success text-left">Notable courses taken at CUHK</h1>
 
       <div class="row justify-content-center text-left" style="padding: 20px;">
         <div class="col-lg-6">
@@ -451,7 +448,7 @@ SID: 1155124868
           <h5 class="text-dark">Grade: A</h5>
           <p>This course I took is basically about python scripting language. I learned about
             object-oriented programming, functional programming, Scipy, NumPy, Visualization, Multithreading, Argparse and Cryptography.</p>
-          <p><img src="image/loc.png" class="loc-img"> Shatin, N.T. Hong Kong</p>
+          <p><img src="image/loc-1.png" class="loc-img"> Shatin, N.T. Hong Kong</p>
           <p><img src="image/link-1.png" class="loc-img"><a href="http://www.cse.cuhk.edu.hk/~cslui/csci2040.html" class="text-secondary">Click here to view course webpage</a></p>
         </div>
       </div>
@@ -467,10 +464,39 @@ SID: 1155124868
           <p>This course I took is about basic engineering concepts, experimental skills and design methodlogy
             needed for the design and construction of a hardware based system. My partner and I have to build a robot car that uses finite state machine to compete with other groups
             to see how fast the car can collect all 12 cups. Our group manage to collect all the cups within one and a half minute and came in second place. Well that was fun...</p>
-          <p><img src="image/loc.png" class="loc-img"> Shatin, N.T. Hong Kong</p>
+          <p><img src="image/loc-1.png" class="loc-img"> Shatin, N.T. Hong Kong</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center text-left" style="padding: 20px;">
+        <div class="col-lg-6">
+          <h4 class="text-dark">CENG 2400 Embedded System Design</h4>
+          <p>Taught by: Prof. Qiang Xu</p>
+          <p>Sep 2020 - Dec 2020</p>
+        </div>
+        <div class="col-lg-6">
+          <h5 class="text-dark">Grade: A</h5>
+          <p>I've learnt the use of microprocessors, interfacing memory systems and timing control of digital signals. The course also discusses peripheral input/output interfacing methods such as: timer, serial and parallel interfaces, analog-to-digital conversion, polling, interrupt, device driver developments and Assembly language programming.</p>
+          <p><img src="image/loc-1.png" class="loc-img"> Shatin, N.T. Hong Kong</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center text-left" style="padding: 20px;">
+        <div class="col-lg-6">
+          <h4 class="text-dark">CSCI 3150 - Introduction to Operating Systems</h4>
+          <p>Taught by: Prof. Shao Zili</p>
+          <p>Sep 2020 - Dec 2020</p>
+        </div>
+        <div class="col-lg-6">
+          <h5 class="text-dark">Grade: A-</h5>
+          <p>I've learnt the various internal components of an operating system, including process and thread management, memory management, file system, security, and synchronization.</p>
+          <p><img src="image/loc-1.png" class="loc-img"> Shatin, N.T. Hong Kong</p>
         </div>
       </div>
     </div>
+
+    </div>
+    
   </section>
 
   <section id="abli" class="table-light text-secondary bg-light">
@@ -488,59 +514,36 @@ SID: 1155124868
               <td><img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"></td>
             </tr>
             <tr>
-              <th>Stack Overflow</th>
+              <th>HTML</th>
               <td><img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"></td>
             </tr>
             <tr>
-              <th>C/C++</th>
-              <td><img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-gray.png"></td>
+              <th>CSS</th>
+              <td><img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"></td>
             </tr>
             <tr>
               <th>Python</th>
-              <td><img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-gray.png"></td>
-            </tr>
-            <tr>
-              <th>Swift</th>
-              <td><img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-gray.png"></td>
-            </tr <tr>
-            <th>Java</th>
-            <td><img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-gray.png"> <img class="loc-img" src="image/star-gray.png"></td>
-            </tr>
-            <tr>
-              <th>HTML</th>
-              <td><img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-gray.png"> <img class="loc-img" src="image/star-gray.png"> <img class="loc-img" src="image/star-gray.png"></td>
+              <td><img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"></td>
             </tr>
           </table>
         </div>
         <div class="col-lg-6">
           <table class="table table-hover table-light bg-light">
             <tr>
-              <th>CSS</th>
-              <td><img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-gray.png"> <img class="loc-img" src="image/star-gray.png"> <img class="loc-img" src="image/star-gray.png"></td>
-            </tr>
-            <tr>
-              <th>JQuery</th>
-              <td><img class="loc-img" src="image/star-gray.png"> <img class="loc-img" src="image/star-gray.png"> <img class="loc-img" src="image/star-gray.png"> <img class="loc-img" src="image/star-gray.png"></td>
-            </tr>
-            <tr>
               <th>Javascript</th>
-              <td><img class="loc-img" src="image/star-gray.png"> <img class="loc-img" src="image/star-gray.png"> <img class="loc-img" src="image/star-gray.png"> <img class="loc-img" src="image/star-gray.png"></td>
+              <td><img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"></td>
             </tr>
             <tr>
-              <th>Ruby</th>
-              <td><img class="loc-img" src="image/star-gray.png"> <img class="loc-img" src="image/star-gray.png"> <img class="loc-img" src="image/star-gray.png"> <img class="loc-img" src="image/star-gray.png"></td>
+              <th>React.js and Redux</th>
+              <td><img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"></td>
             </tr>
             <tr>
-              <th>JSON</th>
-              <td><img class="loc-img" src="image/star-gray.png"> <img class="loc-img" src="image/star-gray.png"> <img class="loc-img" src="image/star-gray.png"> <img class="loc-img" src="image/star-gray.png"></td>
+              <th>Node.js, Express, and MongoDB</th>
+              <td><img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-gray.png"></td>
             </tr>
             <tr>
-              <th>AngularJS</th>
-              <td><img class="loc-img" src="image/star-gray.png"> <img class="loc-img" src="image/star-gray.png"> <img class="loc-img" src="image/star-gray.png"> <img class="loc-img" src="image/star-gray.png"></td>
-            </tr>
-            <tr>
-              <th>PHP</th>
-              <td><img class="loc-img" src="image/star-gray.png"> <img class="loc-img" src="image/star-gray.png"> <img class="loc-img" src="image/star-gray.png"> <img class="loc-img" src="image/star-gray.png"></td>
+              <th>C/C++</th>
+              <td><img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-gray.png"></td>
             </tr>
           </table>
         </div>
@@ -579,10 +582,6 @@ SID: 1155124868
         <div class="col-lg-6">
           <table class="table table-hover table-light bg-light">
             <tr>
-              <th>macOS</th>
-              <td><img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"></td>
-            </tr>
-            <tr>
               <th>MS Word</th>
               <td><img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"></td>
             </tr>
@@ -594,18 +593,6 @@ SID: 1155124868
               <th>MS Excel</th>
               <td><img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-gray.png"></td>
             </tr>
-            <tr>
-              <th>PyCharm</th>
-              <td><img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-gray.png"></td>
-            </tr>
-            <tr>
-              <th>Google Chrome</th>
-              <td><img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-gray.png"></td>
-            </tr>
-            <tr>
-              <th>Safari</th>
-              <td><img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-gray.png"></td>
-            </tr>
           </table>
         </div>
         <div class="col-lg-6">
@@ -615,28 +602,12 @@ SID: 1155124868
               <td><img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-gray.png"></td>
             </tr>
             <tr>
-              <th>Atom</th>
+              <th>VS Code</th>
               <td><img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-gray.png"></td>
             </tr>
             <tr>
               <th>Xcode</th>
               <td><img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-gray.png"></td>
-            </tr>
-            <tr>
-              <th>Android Studio</th>
-              <td><img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-gray.png"> <img class="loc-img" src="image/star-gray.png"></td>
-            </tr>
-            <tr>
-              <th>VS Code</th>
-              <td><img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-gray.png"> <img class="loc-img" src="image/star-gray.png"></td>
-            </tr>
-            <tr>
-              <th>Flutter</th>
-              <td><img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-gray.png"> <img class="loc-img" src="image/star-gray.png"> <img class="loc-img" src="image/star-gray.png"></td>
-            </tr>
-            <tr>
-              <th>Windows 10</th>
-              <td><img class="loc-img" src="image/star-green.png"> <img class="loc-img" src="image/star-gray.png"> <img class="loc-img" src="image/star-gray.png"> <img class="loc-img" src="image/star-gray.png"></td>
             </tr>
           </table>
         </div>
@@ -647,13 +618,17 @@ SID: 1155124868
 
   <section id="fav-web" class="bg-dark text-dark">
     <div class="ab-me-class">
-      <h2 class="display-4 text-light">Favourite Websites</h2>
-      <p class="text-light">“Every now and then go away, have a little relaxation, for when you come back to your work your judgment will be surer.
-        Go some distance away because then the work appears smaller and more of it can be taken in at a glance and a lack of harmony and proportion is more readily seen.”</p>
-      <p class="text-light">― Leonardo da Vinci</p>
+      <h2 class="display-4 text-light">Projects</h2>
+      <p class='text-light'>"Those times you stay up late and you work hard.
+        Those times when you don't feel like working. You're too tired.
+        You don't want to push yourself, but you do it anyway. That is actually the dream."</p>
+      <p class='text-light'>― Kobe Bryant</p>
       <hr class="bg-light">
       <div class="row">
-        <div class="col-lg-6" style="padding: 20px 10px;">
+        
+        <h3 class='display-4 text-light'>In Progress...</h3>
+        
+        <!-- <div class="col-lg-6" style="padding: 20px 10px;">
           <div class="card bg-light" style="width: 100%;">
             <img class="card-img-top" src="image/ig.png" alt="Instagram">
             <div class="card-body">
@@ -662,143 +637,45 @@ SID: 1155124868
               <a href="https://www.instagram.com/" class="btn btn-secondary">Go to Instagram</a>
             </div>
           </div>
-        </div>
-        <div class="col-lg-6" style="padding: 20px 10px;">
-          <div class="card bg-light" style="width: 100%;">
-            <img class="card-img-top" src="image/youtube.png" alt="YouTube">
-            <div class="card-body">
-              <h3 class="card-title display-4">YouTube</h3>
-              <p class="card-text">Don't you hate those double-ads?</p>
-              <a href="https://www.youtube.com" class="btn btn-secondary">Go to YouTube</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6" style="padding: 20px 10px;">
-          <div class="card bg-light" style="width: 100%;">
-            <img class="card-img-top" src="image/netflix.png" alt="Netflix">
-            <div class="card-body">
-              <h3 class="card-title display-4">Netflix</h3>
-              <p class="card-text">Original Series like Explained and Pandemic are good stuff.</p>
-              <a href="https://www.netflix.com/hk-en/Login?nextpage=https%3A%2F%2Fwww.netflix.com%2Fbrowse" class="btn btn-secondary">Go to Netflix</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6" style="padding: 20px 10px;">
-          <div class="card bg-light" style="width: 100%;">
-            <img class="card-img-top" src="image/github.png" alt="Github">
-            <div class="card-body">
-              <h3 class="card-title display-4">Github</h3>
-              <p class="card-text">Well...don't we all?</p>
-              <a href="https://github.com" class="btn btn-secondary">Go to Github</a>
-            </div>
-          </div>
-        </div>
+        </div> -->
+
       </div>
       <br>
     </div>
   </section>
 
-  <section id="hw" class="hw text-dark bg-light">
-    <div class="ab-me-class">
-      <h2 class="display-4">About This Homework...🤔🤔</h2>
-      <p>"Those times you stay up late and you work hard.
-        Those times when you don't feel like working. You're too tired.
-        You don't want to push yourself, but you do it anyway. That is actually the dream."</p>
-      <p>― Kobe Bryant</p>
-      <hr>
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="list-group text-left">
-            <a href="#ab-me" class="list-group-item list-group-item-action">
-              <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">My profile Section</h5>
-                <small>First</small>
-              </div>
-              <p class="mb-1">Grid will change layout from 3 items a row to 1 items in 3 columns (col-lg-4) when width less than 992px.</p>
-              <small>Grids were used</small>
-            </a>
-            <a href="#exp" class="list-group-item list-group-item-action">
-              <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Experiences Section</h5>
-                <small class="text-muted">Second</small>
-              </div>
-              <p class="mb-1">When screen width is less than 992px (col-lg-6), the items on the right will shift to the bottom.</p>
-              <small class="text-muted">Grids were used</small>
-            </a>
-            <a href="#abli" class="list-group-item list-group-item-action">
-              <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Abilities Section</h5>
-                <small class="text-muted">Third</small>
-              </div>
-              <p class="mb-1">The table on the left will shift to the bottom of the right table when screen width is less than 992px (col-lg-6).</p>
-              <small class="text-muted">Tables were used inside the grid</small>
-            </a>
-            <a href="#fav-web" class="list-group-item list-group-item-action">
-              <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Favourite Website</h5>
-                <small>Fourth</small>
-              </div>
-              <p class="mb-1">When screen is less than 992px, the grid will change from 2 cards a row, to 1 row, 4 cards column.</p>
-              <small>Cards from bootstrap were used</small>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="list-group text-left">
-            <a href="#hw" class="list-group-item list-group-item-action">
-              <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">About This Homework</h5>
-                <small class="text-muted">Fifth</small>
-              </div>
-              <p class="mb-1">When screen width is less than 992px (col-lg-6), the list items on the right will shift to the bottom.</p>
-              <small class="text-muted">Custom list with flex-box were used</small>
-            </a>
-            <a href="#contacts" class="list-group-item list-group-item-action">
-              <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Contacts Section</h5>
-                <small class="text-muted">Sixth</small>
-              </div>
-              <p class="mb-1">When screen width is less than 992px (col-lg-4), all the items in the grid will be in a single column.</p>
-              <small class="text-muted">Grids were used</small>
-            </a>
-            <a href="#abli" class="list-group-item list-group-item-action">
-              <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Special Nav-bar</h5>
-                <small class="text-muted">Seventh</small>
-              </div>
-              <p class="mb-1">When the screen size is smaller, the navbar items will be vertical</p>
-              <small class="text-muted">Navbar from bootstrap were used</small>
-            </a>
-          </div>
-        </div>
-      </div>
-      <br>
-    </div>
-  </section>
+  
 
-  <footer id="contacts" class="bg-dark text-light">
+  <footer id="contacts" class="bg-light text-dark">
     <div class="ab-me-class">
-      <h2 class="display-4">Contacts</h2>
-      <p>"You used to call me on my cell phone, late night when you need my love"</p>
-      <p>― Drake</p>
+      <h2 class="display-4">Contacts Information</h2>
       <hr class="bg-light">
       <div class="row">
         <div class="col-4">
-          <a href="https://www.instagram.com/stevedexter23/"><img src="image/ig-2.png" alt="instagram" style="width: 45px; padding: 10px 0;"></a>
+        
+          <a href="https://www.instagram.com/stevedexter23/">
+            <i class="instagram icon ui huge" style="color:rgba(193, 53, 132, 1)"></i>
+          </a>
+          
           <h5 style="padding-bottom: 30px;">Instagram</h5>
         </div>
         <div class="col-4">
-          <a href="https://www.linkedin.com/in/steve-tamang-832838167/"><img src="image/linked-in-2.png" alt="linkedin" style="width: 45px; padding: 10px 0;"></a>
+          <a href="https://www.linkedin.com/in/steve-tamang-832838167/">
+            <i class="linkedin icon ui huge"></i>
+          </a>
           <h5 style="padding-bottom: 30px;">Linkedin</h5>
         </div>
         <div class="col-4">
           <address>
-            <a href="mailto:1155124868@link.cuhk.edu.hk"><img src="image/email.png" alt="Email" style="width: 45px; padding: 10px 0;"></a>
+            <a href="mailto:1155124868@link.cuhk.edu.hk">
+              <i class="envelope outline icon ui huge"></i>
+            </a>
             <h5 style="padding-bottom: 30px;">Email</h5>
           </address>
         </div>
       </div>
-      <p>© Steve Tamang 2020</p>
+      <p>© Steve Tamang 2021</p>
+      <hr>
     </div>
   </footer>
 
